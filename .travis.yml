@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u $DOCKER_USER -p $DOCKER_PASS
+    docker push ma3ya/python-tools
+    fi
