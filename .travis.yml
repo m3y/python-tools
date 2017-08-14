@@ -10,6 +10,5 @@ after_success:
   - |
     if [ "$TRAVIS_BRANCH" == "docker_push" ]; then
       docker login -u $DOCKER_USER -p $DOCKER_PASS
-      docker build -t $DOCKER_USER/python-tools .
       docker push $DOCKER_USER/python-tools
     fi
