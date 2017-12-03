@@ -6,3 +6,6 @@
 - jupyter
 - httpstat
 - http-prompt
+- trypackage
+- yamllint
+- toml
